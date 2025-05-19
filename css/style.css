@@ -87,7 +87,41 @@
             position: relative;
             overflow: hidden;
         }
-        
+        .logo-topo{
+            padding-left: 45px;
+
+        }
+        .logo-topo::before{
+             content: '';
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            background-image: url(../images/buraconegro.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-left: -45px;
+            animation: shine 8s infinite linear;
+        }
+
+        .logo-footer{
+            padding-left: 55px;
+        }
+        .logo-footer::before{
+             content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url(../images/buraconegro.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-left: -65px;
+            animation: shine 8s infinite linear;
+        }
+        .logo-footer img{
+            margin-left: -5px;
+        }
         .holographic-effect::before {
             content: '';
             position: absolute;
@@ -106,11 +140,23 @@
             transform: rotate(30deg);
             animation: shine 8s infinite linear;
             z-index: -1;
+            background-image: url(../images/buraconegro.png);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.1;
         }
         
         @keyframes shine {
-            0% { transform: translateX(-100%) rotate(30deg); }
-            100% { transform: translateX(100%) rotate(30deg); }
+            /*0% { transform: translateX(-100%) rotate(0deg); }
+            100% { transform: translateX(100%) rotate(100deg); }*/
+
+            from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
         }
 
         /* Language switcher styles */
@@ -181,4 +227,49 @@
             height: 20px;
             margin-right: 0.5rem;
             border-radius: 50%;
+        }
+
+        /* Tablet (<= 768px) */
+        @media (max-width: 768px) {
+               .logo-topo{
+                max-width: 200px;
+
+               }
+               .logo-topo img{
+                width: 70%;
+                
+               }
+            }
+
+        /* Celulares grandes (<= 480px) */
+        @media (max-width: 480px) {
+          .logo-topo{
+            max-width: 200px;
+           }
+           .logo-topo img{
+            width: 70%;
+            
+           }
+        }
+
+        /* Celulares grandes (<= 480px) */
+        @media (max-width: 480px) {
+          .logo-topo{
+            max-width: 170px;
+           }
+           .logo-topo img{
+            width: 80%;
+            
+           }
+        }
+
+        /* Celulares grandes (<= 480px) */
+        @media (max-width: 900px) {
+          .logo-topo{
+            max-width:200px;
+           }
+           .logo-topo img{
+            width: 80%;
+            
+           }
         }

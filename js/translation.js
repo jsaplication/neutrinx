@@ -285,7 +285,7 @@
         });
 
         // Update current language display
-        document.getElementById('current-flag').src = lang === 'en' ? 'https://flagcdn.com/w20/us.png ' : 'https://flagcdn.com/w20/br.png ';
+        // document.getElementById('current-flag').src = lang === 'en' ? 'https://flagcdn.com/w20/us.png ' : 'https://flagcdn.com/w20/br.png ';
         document.getElementById('current-language').textContent = lang.toUpperCase();
     }
 
